@@ -21,5 +21,8 @@ def predict():
     return jsonify(result)
 
 
+## To serve this application using waitress use below command. in predict:app, predict is the name of this python file
+## pipenv run waitress-serve --listen=0.0.0.0:9696 predict:app
+
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=9696)
